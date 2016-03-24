@@ -1,0 +1,29 @@
+# Project: ×Ö·û´®°´µ¥´ÊÄæÐòStrReverse
+# Makefile created by Dev-C++ 5.2.0.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = StrReverseMain.o $(RES)
+LINKOBJ  = StrReverseMain.o $(RES)
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc  -g3 
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW32/include" 
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW32/include" 
+BIN      = ×Ö·û´®°´µ¥´ÊÄæÐòStrReverse.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS   = $(INCS)   -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ×Ö·û´®°´µ¥´ÊÄæÐòStrReverse.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "×Ö·û´®°´µ¥´ÊÄæÐòStrReverse.exe" $(LIBS)
+
+StrReverseMain.o: StrReverseMain.c
+	$(CC) -c StrReverseMain.c -o StrReverseMain.o $(CFLAGS)
